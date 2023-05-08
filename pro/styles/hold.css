@@ -1,0 +1,215 @@
+.body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.body .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.body .container h2 {
+  margin-bottom: 8vh;
+  font-size: 2rem;
+}
+
+.body .container .formWrap {
+  background: #fff;
+  width: 35vw;
+  border-radius: 5px;
+  padding: 25px 20px;
+  color: #333;
+  margin-bottom: 20vh;
+}
+
+.body .container .formWrap .formGroup {
+  margin-top: 15px;
+}
+
+.body .container .formWrap .formGroup label {
+  display: block;
+  color: #666;
+  margin-bottom: 2vh;
+  font-weight: bold;
+}
+
+.body .container .formWrap .formGroup .input {
+  /* display: block;
+        margin: auto; */
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.body .container .formWrap .formGroup .input::placeholder {
+  color: #bbb;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+}
+
+.body .container .formWrap button {
+  display: block;
+  margin-top: 20px;
+  width: 40%;
+  padding: 20px;
+  border: none;
+  border-radius: 40px;
+  background: #10034b;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.body .container .formWrap button:hover {
+  background: #37a08e;
+}
+
+.body .container .formWrap .action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.body .container .formWrap .action span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #bbb;
+}
+
+.body .container .formWrap .action span .a {
+  font-weight: bold;
+  cursor: pointer;
+  color: #10034b;
+  text-decoration: none;
+}
+
+.body .container .formWrap .formGroup .err {
+  color: red;
+}
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  }
+
+  .card:hover span {
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .card:hover span {
+    transform: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .content {
+    padding: 4rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 120px;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  .card {
+    padding: 1rem 2.5rem;
+  }
+
+  .card h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .center {
+    padding: 8rem 0 6rem;
+  }
+
+  .center::before {
+    transform: none;
+    height: 300px;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .description a {
+    padding: 1rem;
+  }
+
+  .description p,
+  .description div {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+  }
+
+  .description p {
+    align-items: center;
+    inset: 0 0 auto;
+    padding: 2rem 1rem 1.4rem;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
+    background: linear-gradient(
+      to bottom,
+      rgba(var(--background-start-rgb), 1),
+      rgba(var(--callout-rgb), 0.5)
+    );
+    background-clip: padding-box;
+    backdrop-filter: blur(24px);
+  }
+
+  .description div {
+    align-items: flex-end;
+    pointer-events: none;
+    inset: auto 0 0;
+    padding: 2rem;
+    height: 200px;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgb(var(--background-end-rgb)) 40%
+    );
+    z-index: 1;
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .grid {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .vercelLogo {
+    filter: invert(1);
+  }
+
+  .logo {
+    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
